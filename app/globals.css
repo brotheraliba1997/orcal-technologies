@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap"); */
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@1&display=swap");
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -89,9 +90,8 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-
 body {
-  font-family: Arial, Poppins, sans-serif;
+  font-family: "Satoshi", sans-serif;
   scroll-behavior: smooth;
   background-color: black;
 }
@@ -105,34 +105,9 @@ body {
 .inter-font {
   font-family: "Inter", sans-serif !important;
   font-optical-sizing: auto;
-  font-weight: 400; /* change as needed */
+  font-weight: 500; /* change as needed */
   font-style: normal;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #020e1a;
-    --foreground: #ffffff;
-  }
-}
-
-body {
-
-  background: #ffffff;
-  color: #020e1a;
-
-  font-family: ret;
-}
-
-.dark body {
-  color: #ffffff;
-  background: #020e1a;
-
-  font-family: ret;
-} */
-/* {
-  background-color: #020e1a;
-} */
 
 h1,
 h2,
@@ -140,21 +115,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Satoshi", sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: 400; */
+  font-weight: 500;
   font-style: normal;
 }
-/* h1 {
-  font-size: 76.67px;
-}
-h2 {
-  font-size: 52.46px;
-} */
+
 p {
- font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: 400;  */
+
   font-style: normal;
 }
 
@@ -175,7 +145,6 @@ p {
   cursor: not-allowed;
 }
 
-/* Card styling */
 .swiper-slide {
   height: auto;
   display: flex;
@@ -186,15 +155,6 @@ button {
   font-weight: 400;
   font-style: normal;
 }
-/* input {
-  font-family: "Rethink Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  width: min-content;
-  max-width: min-content;
-  outline-style: none;
-} */
 
 textarea {
   font-family: "Rethink Sans", sans-serif;
@@ -247,42 +207,56 @@ textarea {
   }
 }
 
-
 .custom-shape-divider-bottom-1751037293 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1751037293 svg {
-    position: relative;
-    display: block;
-    width: calc(142% + 1.3px);
-    height: 222px;
+  position: relative;
+  display: block;
+  width: calc(142% + 1.3px);
+  height: 222px;
 }
 
 .custom-shape-divider-bottom-1751037293 .shape-fill {
-    fill: #010000;
+  fill: #010000;
 }
 
-.font-Lobster{
-    font-family: 'Lobster', cursive;
+.font-Lobster {
+  font-family: "Lobster", cursive;
 }
 
-.primary-main{
-  background-color: #F3FF9F !important;
-
+.primary-main {
+  background-color: #f3ff9f !important;
 }
 
-
-.text-primary-main{
-  color: #F3FF9F !important;
-
+.text-primary-main {
+  color: #f3ff9f !important;
 }
 
-
-
+.swiper-pagination-bullet {
+  background: gray;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 4px !important;
+}
+.swiper-pagination-bullet-active {
+  background: #f3ff9f; /* yellow active */
+  width: 30px;
+  border-radius: 9999px; /* rounded line */
+}
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
