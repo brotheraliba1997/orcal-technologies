@@ -21,7 +21,7 @@ function Footer() {
             <div className="bg-[#16171b] py-3 px-2 w-full rounded-md flex gap-2 justify-between border border-[#222327]">
               <input
                 type="email"
-                className="bg-transparent border-none px-4  placeholder-white w-full focus:placeholder-gray-300"
+                className="bg-transparent border-none px-4  placeholder-white w-full focus:placeholder-gray-300 text-white"
                 placeholder="Enter email address*"
               />
               <div className="bg-white p-3 flex justify-center items-center rounded-full ">

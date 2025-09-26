@@ -4,7 +4,7 @@ function ContactUs() {
   return (
     <section className="relative bg-gradient-to-b from-[#F3FF9F] to-white md:py-16 py-8 md:px-10 px-4">
       <div className=" grid md:grid-cols-2 gap-16 bg-white shadow-lg   md:p-16 p-4" >
-        {/* LEFT SIDE */}
+      
         <div className="flex flex-col md:gap-16 gap-4 md:border-r border-0  border-gray-300">
           <h2 className="text-lg uppercase tracking-wider text-gray-700">
             Contact Us
@@ -31,9 +31,9 @@ function ContactUs() {
           </div>
         </div>
 
-        {/* RIGHT SIDE FORM */}
+      
         <form className="flex flex-col md:gap-16 gap-4">
-          {/* First Row */}
+       
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
