@@ -5,17 +5,12 @@ const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}", 
-    "./sections/**/*.{js,ts,jsx,tsx,mdx}", 
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}", // agar pages/ bhi use karte ho
+    "./sections/**/*.{js,ts,jsx,tsx,mdx}", // agar tumne alag sections folder banaya hai
   ],
 
   theme: {
     extend: {
-      fontFamily: {
-        satoshi: ["Satoshi", "sans-serif"],
-        poppins: ["var(--font-poppins)", "sans-serif"],
-      },
-
       colors: {
         primary: {
           main: "#F3FF9F",
