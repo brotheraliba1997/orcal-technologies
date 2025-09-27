@@ -10,6 +10,7 @@ import ContactUs from './components/ContactUs';
 // import Viewourworks from './components/Viewourworks';
 import Industriesweserved from './components/Industriesweserved';
 import OurClients from './components/OurClients';
+import ScrollImages from './components/page';
 
 
 
@@ -24,6 +25,7 @@ function Home() {
    
     
     {/* <Viewourworks /> */}
+    <ScrollImages />
     <Industriesweserved />
     <OurClients />
      <FAQ />

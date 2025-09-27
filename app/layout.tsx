@@ -14,11 +14,11 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
   return (
     <html lang="en">
       <body className="antialiased overflow-x-hidden">
-        <Header />
+        {/* <Header /> */}
         
         {children}
 
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
