@@ -51,8 +51,8 @@ export default function FAQ() {
   };
 
   return (
-    <section className="text-white  py-20 flex flex-col md:gap-32 gap-16 relative ">
-      <div className="grid md:grid-cols-8 grid-cols-1  md:pl-18 pl-4 md:pr-4  pr-4  justify-between w-full ">
+    <section className="text-white  py-20 flex flex-col lg:gap-32 gap-16 relative ">
+      <div className="grid lg::grid-cols-8 grid-cols-1  lg:pl-18 pl-4 lg:pr-4  pr-4  justify-between w-full ">
         <div className=" flex flex-col gap-8 col-span-2">
           <div className="flex gap-4 items-center ">
             <div className="primary-main h-[8px] w-[8px] "></div>
@@ -111,7 +111,7 @@ export default function FAQ() {
             </div>
           ))}
         </div>
-        <div className="md:block hidden">
+        <div className="lg:block hidden">
           <div className=" w-full flex justify-end absolute left-32  top-16 -z-10">
             <div className="relative  md:w-[200px] w-[100px] md:h-[200px] h-[100px]  -rotate-45">
               <Image

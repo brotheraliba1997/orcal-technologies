@@ -26,21 +26,21 @@ export async function POST(req: any) {
     const newsLetterFound = await NewsLetter.findOne({ email: body?.email });
     if (newsLetterFound) {
       return NextResponse.json(
-        { success: false, message: "News letter already subscribed" },
+        { success: false, message: "Email is already subscribed" },
         { status: 400 }
       );
     }
 
     if (body?.email === "") {
       return NextResponse.json(
-        { success: false, message: "email is empty" },
+        { success: false, message: "Email is required " },
         { status: 400 }
       );
     }
 
     if (body?.email && !/^[^\s@]+@[^\s@]+\.[cC][oO][mM]$/.test(body.email)) {
       return NextResponse.json(
-        { success: false, message: "email is not valid" },
+        { success: false, message: "Invalid email" },
         { status: 400 }
       );
     }
@@ -48,7 +48,7 @@ export async function POST(req: any) {
     await NewsLetter.create(body);
 
     return NextResponse.json(
-      { success: true, message: "submit successfully" },
+      { success: true, message: "Successfully subscribed" },
       { status: 201 }
     );
   } catch (err: any) {

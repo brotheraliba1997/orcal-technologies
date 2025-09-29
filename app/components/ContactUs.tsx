@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 interface Form {
   firstName: string;
@@ -32,14 +33,15 @@ function ContactUs() {
     try {
       const dataSubmited = await axios.post("/api/contact-us", formData);
       console.log(dataSubmited?.data?.message);
+      toast.success(dataSubmited?.data?.message);
     } catch (err: any) {
-      console.log(err?.response?.data?.message);
+      toast.error(err?.response?.data?.message);
     }
   };
 
   return (
     <section className="relative bg-gradient-to-b from-[#F3FF9F] to-white md:py-16 py-8 md:px-10 px-4">
-      <div className=" grid md:grid-cols-2 gap-16 bg-white shadow-lg   md:p-16 p-4">
+      <div className=" grid lg:grid-cols-2 gap-16 bg-white shadow-lg   md:p-16 p-4">
         <div className="flex flex-col md:gap-16 gap-4 md:border-r border-0  border-gray-300">
           <h2 className="text-lg uppercase tracking-wider text-gray-700">
             Contact Us

@@ -47,7 +47,7 @@ export default function OurServices() {
 
           <SectionLabel label={"OUR SERVICES"} />
 
-        <h1 className="text-[35px] md:text-[84px] font-bold leading-[1]">
+        <h1 className="text-[35px] md:text-6xl lg:text-[84px] font-bold leading-[1]">
           One-stop shop for your{" "}
           <span className="text-primary-main">logo & design</span> solution
         </h1>
@@ -72,10 +72,10 @@ export default function OurServices() {
                 } `}
               />
             </div>
-            <h1 className="md:text-5xl text-2xl font-semibold">
+            <h1 className="lg:text-5xl text-2xl font-semibold">
               {service.title}
             </h1>
-            <p className="text-gray-400 md:text-lg text-md leading-relaxed">
+            <p className="text-gray-400 lg:text-lg text-md leading-relaxed">
               {service.desc}
             </p>
           </div>

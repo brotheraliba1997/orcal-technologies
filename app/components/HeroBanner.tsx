@@ -4,7 +4,7 @@ import SectionLabel from "./SectionLabel";
 
 export default function HeroBanner() {
   return (
-    <section className="relative w-full lg:h-[800px] h-[450px] overflow-hidden">
+    <section className="relative w-full lg:h-[800px] md:h-[600px] h-[450px] overflow-hidden">
       <video
         className="absolute  w-full h-full object-cover"
         src="/herobanner.mp4"
@@ -14,20 +14,20 @@ export default function HeroBanner() {
       />
       <div className="absolute inset-0 bg-black/50 " />
       <div className="relative z-10  h-full flex flex-col py-28 ">
-        <div className="flex flex-col gap-4   text-white  md:px-18  px-10">
+        <div className="flex flex-col gap-4    text-white  md:px-18  px-10">
           <SectionLabel label={"IN DUBAI"} />
 
-          <div className="flex justify-between md:items-center items-start md:flex-row flex-col">
-            <h1 className="md:text-[140px] text-[50px]  font-bold font-Satoshi">
+          <div className="flex justify-between lg:items-center items-start lg:flex-row flex-col lg:gap-0 md:gap-8 ">
+            <h1 className="lg:text-[140px] md:text-8xl  text-[50px]  font-bold font-Satoshi">
               Leading
             </h1>
             <div className="flex gap-4 md:flex-col flex-col ">
-              <p className="text-lg md:text-xl text-primary-main">© 2025 </p>
-              <p className="text-lg md:text-xl "> Let your brand stands out</p>
+              <p className="text-lg lg:text-xl text-primary-main">© 2025 </p>
+              <p className="text-lg lg:text-xl md:text-4xl "> Let your brand stands out</p>
             </div>
           </div>
 
-          <div className="flex gap-4 md:text-[128px] text-[25px] text-primary-main   ">
+          <div className="flex gap-4 lg:text-[128px] md:text-[50px] text-[25px] text-primary-main   ">
             <h2 className=" font-semibold  ">
               LOGO Design <span className="text-white">Agency </span>
             </h2>

@@ -22,7 +22,7 @@ export default function Industriesweserved() {
           <h2 className="md:text-lg text-sm  uppercase ">Way of work</h2>
         </div>
 
-        <h1 className="text-[35px] md:text-[84px] font-bold leading-[1]">
+        <h1 className="text-[35px] md:text-6xl lg:text-[84px] font-bold leading-[1]">
           <span className="text-primary-main">Industries </span>
           we served
         </h1>
@@ -39,7 +39,7 @@ export default function Industriesweserved() {
         }}
         breakpoints={{
           320: { slidesPerView: 1.2, spaceBetween: 10 }, // mobile
-          640: { slidesPerView: 2, spaceBetween: 15 }, // tablet
+          640: { slidesPerView: 2.5, spaceBetween: 15 }, // tablet
           1024: { slidesPerView: 2.5, spaceBetween: 20 }, // desktop
         }}
         modules={[Pagination, Autoplay]}

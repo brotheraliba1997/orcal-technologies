@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import SocialFAQs from "../SocialFAQs";
@@ -6,6 +6,7 @@ import Image from "next/image";
 import bullseye from "@/assests/Bullseye-logo.png";
 import Link from "next/link";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 interface Form {
   email: string;
@@ -29,15 +30,16 @@ function Footer() {
     try {
       const dataSubmited = await axios.post("/api/news-letter", formData);
       console.log(dataSubmited?.data?.message);
+      toast.success(dataSubmited?.data?.message);
     } catch (err: any) {
-      console.log(err?.response?.data?.message);
+      toast.error(err?.response?.data?.message);
     }
   };
 
   return (
     <>
       <div className="pt-[150px] md:px-10 px-6   flex flex-col md:gap-32 gap-8">
-        <div className="grid md:grid-cols-8 grid-cols-1 md:gap-12 gap-4">
+        <div className="grid lg:grid-cols-8 grid-cols-1 md:gap-12 gap-4">
           <div className="flex flex-col gap-8 md:col-span-3 ">
             <h2 className="text-4xl text-white">Stay connected</h2>
 
@@ -63,7 +65,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="flex col-span-2 md:justify-center justify-start ">
+          <div className="flex col-span-2 lg:justify-center justify-start ">
             <div className="flex flex-col gap-3 text-[18px] text-white  ">
               <h3 className="font-semibold text-[20px] mb-2">Main Links</h3>
               <Link href="/" className="hover:text-[#AAA9AD] ">
@@ -81,7 +83,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="flex md:justify-end justify-start   md:col-span-2">
+          <div className="flex lg:justify-end justify-start  lg:col-span-2">
             <div className="flex flex-col gap-12">
               <div className="flex flex-col gap-3 text-[18px] text-white  ">
                 <h3 className="font-semibold text-[20px] mb-2 transition-colors">
@@ -113,7 +115,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 grid-cols-1 md:gap-0 gap-x-2 gap-y-8">
+        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-0 gap-x-2 gap-y-8">
           <div>
             <SocialFAQs />
           </div>

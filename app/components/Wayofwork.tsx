@@ -39,7 +39,7 @@ function Wayofwork() {
             <h2 className="md:text-lg text-md uppercase ">Way of work</h2>
           </div>
 
-          <h1 className="text-[35px] md:text-[84px] font-bold leading-[1]">
+          <h1 className="text-[35px] lg:text-[84px] md:text-6xl font-bold leading-[1]">
             Our
             <span className="text-primary-main"> Process</span>
           </h1>
@@ -55,14 +55,14 @@ function Wayofwork() {
         </div> */}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 border-gray-700 md:px-20 px-4">
+      <div className="grid grid-cols-1 md:gap-6  lg:grid-cols-2 border-gray-700 md:px-20 px-4">
         {Wayofwork.map((wayofwork, idx) => (
           <div
             key={idx}
             className={`py-8 md:px-12 px-4  flex md:flex-row flex-col   justify-center items-center md:gap-0 gap-4 ${
-              idx === 0 || idx === 1 ? "" : "md:border-t border-0"
+              idx === 0 || idx === 1 ? "" : "lg:border-t border-0"
             } ${
-              idx === 0 || idx === 2 ? "md:border-r border-0" : "border-0"
+              idx === 0 || idx === 2 ? "lg:border-r border-0" : "border-0"
             }   border-gray-700 
              
              `}

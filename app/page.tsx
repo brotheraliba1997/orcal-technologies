@@ -16,15 +16,11 @@ function Home() {
   return (
     <>
       <HeroBanner />
-
       <AboutUs />
-
       <OurServices />
-
       <ScrollImages />
       <Wayofwork />
       <CounterSection />
-
       <Industriesweserved />
       <OurClients />
       <FAQ />
