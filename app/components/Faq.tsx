@@ -52,7 +52,7 @@ export default function FAQ() {
 
   return (
     <section className="text-white  py-20 flex flex-col lg:gap-32 gap-16 relative ">
-      <div className="grid lg::grid-cols-8 grid-cols-1  lg:pl-18 pl-4 lg:pr-4  pr-4  justify-between w-full ">
+      <div className="grid lg:grid-cols-8 grid-cols-1  lg:pl-18 pl-4 lg:pr-4  pr-4  justify-between w-full ">
         <div className=" flex flex-col gap-8 col-span-2">
           <div className="flex gap-4 items-center ">
             <div className="primary-main h-[8px] w-[8px] "></div>
