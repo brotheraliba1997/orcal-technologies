@@ -36,7 +36,10 @@ function ContactUs() {
     try {
       setLoading(true);
       const dataSubmited = await axios.post("/api/contact-us", formData);
-      setLoading(false);
+
+      console.log(dataSubmited?.data?.message);
+      toast.success(dataSubmited?.data?.message);
+
       setFormData({
         firstName: "",
         lastName: "",
@@ -44,13 +47,10 @@ function ContactUs() {
         phone: "",
         message: "",
       });
-
-      console.log(dataSubmited?.data?.message);
-      toast.success(dataSubmited?.data?.message);
     } catch (err: any) {
-      setLoading(false);
-
       toast.error(err?.response?.data?.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -87,6 +87,7 @@ function ContactUs() {
               <label className="text-[20px] font-medium">First Name </label>
               <input
                 onChange={handleChange}
+                value={formData.firstName}
                 name="firstName"
                 type="text"
                 className="border-b border-gray-400 focus:border-black outline-none "
@@ -96,6 +97,8 @@ function ContactUs() {
             <div className=" flex flex-col gap-2">
               <label className="text-[20px] font-medium">Last Name </label>
               <input
+                value={formData.lastName}
+
                 onChange={handleChange}
                 name="lastName"
                 type="text"
@@ -109,6 +112,8 @@ function ContactUs() {
               <label className="text-[20px] font-medium">Phone Number </label>
               <input
                 type="Number"
+                value={formData.phone}
+
                 onChange={handleChange}
                 name="phone"
                 className="border-b border-gray-400 focus:border-black outline-none "
@@ -119,6 +124,8 @@ function ContactUs() {
               <label className="text-[20px] font-medium">Email</label>
               <input
                 type="email"
+                value={formData.email}
+
                 onChange={handleChange}
                 name="email"
                 className="border-b border-gray-400 focus:border-black outline-none "
@@ -130,6 +137,8 @@ function ContactUs() {
             <label className="text-[20px] font-medium">Message</label>
             <textarea
               onChange={handleChange}
+                value={formData.message}
+
               name="message"
               className="border-b border-gray-400 focus:border-black outline-none py-2"
             />
@@ -141,25 +150,26 @@ function ContactUs() {
               className="mt-4 flex cursor-pointer items-center justify-center gap-3 border border-gray-800 pl-12  font-medium hover:bg-gray-100 transition"
             >
               Submit
-
-              {loading ? <LoadingSpinner /> :  
-              <span className="bg-[#F3FF9F] p-4 rounded-md">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-black"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 12h14M12 5l7 7-7 7"
-                  />
-                </svg>
-              </span>
-              }
+              {loading ? (
+                <LoadingSpinner />
+              ) : (
+                <span className="bg-[#F3FF9F] p-4 rounded-md">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-black"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 12h14M12 5l7 7-7 7"
+                    />
+                  </svg>
+                </span>
+              )}
             </button>
           </div>
         </form>
