@@ -1,11 +1,39 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import SocialFAQs from "../SocialFAQs";
 import Image from "next/image";
 import bullseye from "@/assests/Bullseye-logo.png";
 import Link from "next/link";
+import axios from "axios";
+
+interface Form {
+  email: string;
+}
 
 function Footer() {
+  const [formData, setFormData] = useState<Form>({
+    email: "",
+  });
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const submitHandleChange = async (e: any) => {
+    e.preventDefault();
+    try {
+      const dataSubmited = await axios.post("/api/news-letter", formData);
+      console.log(dataSubmited?.data?.message);
+    } catch (err: any) {
+      console.log(err?.response?.data?.message);
+    }
+  };
+
   return (
     <>
       <div className="pt-[150px] md:px-10 px-6   flex flex-col md:gap-32 gap-8">
@@ -23,8 +51,13 @@ function Footer() {
                 type="email"
                 className="bg-transparent border-none px-4  placeholder-white w-full focus:placeholder-gray-300 text-white"
                 placeholder="Enter email address*"
+                onChange={handleChange}
+                name="email"
               />
-              <div className="bg-white p-3 flex justify-center items-center rounded-full ">
+              <div
+                className="bg-white p-3 flex justify-center items-center rounded-full "
+                onClick={submitHandleChange}
+              >
                 <FaArrowRight />
               </div>
             </div>
@@ -36,22 +69,13 @@ function Footer() {
               <Link href="/" className="hover:text-[#AAA9AD] ">
                 Home
               </Link>
-              <Link
-                href="#"
-                className="hover:text-[#AAA9AD] transition-colors"
-              >
+              <Link href="#" className="hover:text-[#AAA9AD] transition-colors">
                 About Us
               </Link>
-              <Link
-                href="#"
-                className="hover:text-[#AAA9AD] transition-colors"
-              >
+              <Link href="#" className="hover:text-[#AAA9AD] transition-colors">
                 Projects
               </Link>
-              <Link
-                href="#"
-                className="hover:text-[#AAA9AD] transition-colors"
-              >
+              <Link href="#" className="hover:text-[#AAA9AD] transition-colors">
                 Blog
               </Link>
             </div>

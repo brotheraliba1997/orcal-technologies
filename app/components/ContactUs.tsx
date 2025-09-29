@@ -1,6 +1,42 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import axios from "axios";
+
+interface Form {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
 function ContactUs() {
+  const [formData, setFormData] = useState<Form>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const submitHandleChange = async (e: any) => {
+    e.preventDefault();
+    try {
+      const dataSubmited = await axios.post("/api/contact-us", formData);
+      console.log(dataSubmited?.data?.message);
+    } catch (err: any) {
+      console.log(err?.response?.data?.message);
+    }
+  };
+
   return (
     <section className="relative bg-gradient-to-b from-[#F3FF9F] to-white md:py-16 py-8 md:px-10 px-4">
       <div className=" grid md:grid-cols-2 gap-16 bg-white shadow-lg   md:p-16 p-4">
@@ -25,11 +61,16 @@ function ContactUs() {
           </div>
         </div>
 
-        <form className="flex flex-col md:gap-16 gap-4">
+        <form
+          className="flex flex-col md:gap-16 gap-4"
+          onSubmit={submitHandleChange}
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className=" flex flex-col gap-2">
               <label className="text-[20px] font-medium">First Name </label>
               <input
+                onChange={handleChange}
+                name="firstName"
                 type="text"
                 className="border-b border-gray-400 focus:border-black outline-none "
               />
@@ -38,6 +79,8 @@ function ContactUs() {
             <div className=" flex flex-col gap-2">
               <label className="text-[20px] font-medium">Last Name </label>
               <input
+                onChange={handleChange}
+                name="lastName"
                 type="text"
                 className="border-b border-gray-400 focus:border-black outline-none "
               />
@@ -49,6 +92,8 @@ function ContactUs() {
               <label className="text-[20px] font-medium">Phone Number </label>
               <input
                 type="Number"
+                onChange={handleChange}
+                name="phone"
                 className="border-b border-gray-400 focus:border-black outline-none "
               />
             </div>
@@ -57,6 +102,8 @@ function ContactUs() {
               <label className="text-[20px] font-medium">Email</label>
               <input
                 type="email"
+                onChange={handleChange}
+                name="email"
                 className="border-b border-gray-400 focus:border-black outline-none "
               />
             </div>
@@ -64,7 +111,11 @@ function ContactUs() {
 
           <div className=" flex flex-col gap-2">
             <label className="text-[20px] font-medium">Message</label>
-            <textarea className="border-b border-gray-400 focus:border-black outline-none py-2" />
+            <textarea
+              onChange={handleChange}
+              name="message"
+              className="border-b border-gray-400 focus:border-black outline-none py-2"
+            />
           </div>
 
           <div className="flex justify-center items-center">

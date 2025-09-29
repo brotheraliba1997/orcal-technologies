@@ -16,9 +16,9 @@ export default function ScrollImages() {
           <span className="text-primary-main"> works</span>
         </h1>
 
-        <div className="md:h-[300vh] h-[150vh] relative">
+        <div className="md:h-[300vh] h-[720px] relative ">
           {/* Image 1 */}
-          <div className="md:h-screen h-[50vh]  sticky top-0 z-10 ">
+          <div className="md:h-screen h-[240px]  sticky top-0 z-10 ">
             <Image
               src={mathew}
               alt="Image 1"
@@ -49,7 +49,7 @@ export default function ScrollImages() {
           </div>
 
           {/* Image 2 */}
-          <div className="md:h-screen h-[50vh] sticky top-0 z-20 bg-black">
+          <div className="md:h-screen h-[240px] sticky top-0 z-20 bg-black">
             <Image
               src={creating}
               alt="Image 2"
@@ -78,7 +78,7 @@ export default function ScrollImages() {
           </div>
 
           {/* Image 3 */}
-          <div className="md:h-screen h-[50vh] sticky top-0 z-30 bg-black">
+          <div className="md:h-screen h-[240px] sticky top-0 z-30 bg-black">
             <Image
               src={runestudios}
               alt="Image 3"
