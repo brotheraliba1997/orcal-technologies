@@ -46,6 +46,16 @@ const config: Config = {
         "6xl": "3rem",
         heading: ["50px", { lineHeight: "1.4" }],
       },
+
+      keyframes: {
+        move: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '50%': { transform: 'translate(50px, -50px) scale(1.2)' },
+        },
+      },
+      animation: {
+        move: "move 10s ease-in-out infinite alternate",
+      },
     },
   },
   plugins: [],

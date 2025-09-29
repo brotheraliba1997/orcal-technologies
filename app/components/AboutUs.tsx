@@ -4,16 +4,20 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import glass from "@/assests/Creativity-glass.png";
 import creating from "@/assests/creatibg-right.png";
+import SectionLabel from "./SectionLabel";
+import AnimatedBackground from "./AnimatedBackground";
 
 export default function AboutUs() {
   return (
-    <section className="text-white">
-      <div className="flex justify-between items-center">
+
+    <> 
+
+<AnimatedBackground >
+
+   <section className="text-white border border-black pb-20 ">
+      <div className="flex justify-between items-center ">
         <div className="md:px-12 px-4 md:mt-8  mt-4 flex flex-col gap-8 ">
-          <div className="flex gap-2 items-center ">
-            <div className="bg-[#71FF49] h-[8px] w-[8px] rounded-full"></div>
-            <p className="md:text-lg text-sm tracking-widest uppercase">IN DUBAI</p>
-          </div>
+          <SectionLabel label={"About Us"} />
 
           <h1 className="text-[30px] md:text-[84px] font-bold leading-[1]">
             Where <span className="text-primary-main">Creativity</span> <br />{" "}
@@ -21,7 +25,7 @@ export default function AboutUs() {
           </h1>
         </div>
 
-        <div className="relative md:w-[273px] w-[100px] md:h-[273px] h-[100px] -mt-[50px] ">
+        <div className="relative md:w-[273px] w-[100px] md:h-[273px] h-[100px] md:mt-[80px] -mt-[50px]  ">
           <Image
             src={creating}
             alt="Moving Image"
@@ -62,5 +66,13 @@ export default function AboutUs() {
         </div>
       </div>
     </section>
+ </AnimatedBackground>
+
+     </>
+
+
+
+
+ 
   );
 }

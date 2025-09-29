@@ -47,7 +47,7 @@ export default function OurClients() {
         {services.map((service, idx) => (
           <div
             key={idx}
-            className={`md:py-8 py-4 md:px-12 px-6 flex flex-col bg-[#121212] justify-center items-center gap-8 border-gray-700 border 
+            className={`md:py-8 py-4 md:px-12 px-6 flex flex-col bg-[#121212] justify-center h-[200px] items-center  border-[#252525] border 
             
              `}
           >
@@ -59,6 +59,8 @@ export default function OurClients() {
                 className={`object-contain`}
               />
             </div>
+
+            <div className="text-right w-full" > #{idx+1} </div>
           </div>
         ))}
       </div>

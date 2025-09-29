@@ -3,8 +3,7 @@ import React from "react";
 function ContactUs() {
   return (
     <section className="relative bg-gradient-to-b from-[#F3FF9F] to-white md:py-16 py-8 md:px-10 px-4">
-      <div className=" grid md:grid-cols-2 gap-16 bg-white shadow-lg   md:p-16 p-4" >
-      
+      <div className=" grid md:grid-cols-2 gap-16 bg-white shadow-lg   md:p-16 p-4">
         <div className="flex flex-col md:gap-16 gap-4 md:border-r border-0  border-gray-300">
           <h2 className="text-lg uppercase tracking-wider text-gray-700">
             Contact Us
@@ -13,61 +12,61 @@ function ContactUs() {
             Reach Us
           </h1>
           <p className="text-gray-600 text-lg">
-            Have a project in mind or need expert guidance? We’d love to <br></br> hear 
-            from you.  Reach out to us for inquiries, collaborations, or
-            consultations.
+            Have a project in mind or need expert guidance? We’d love to{" "}
+            <br></br> hear from you. Reach out to us for inquiries,
+            collaborations, or <br></br> consultations.
           </p>
 
           <div className="space-y-4 text-gray-700">
+            <p className="font-medium p-0 m-0">Phone: (808) 555-0111 3891</p>
             <p className="font-medium">
-              Phone: <span className="font-normal">(808) 555-0111</span>
-            </p>
-            <p className="font-medium">
-              Address:{" "}
-              <span className="font-normal">
-                3891 Ranchview Dr. Richardson, California 62639
-              </span>
+              Ranchview Dr. Richardson, <br></br> California 62639
             </p>
           </div>
         </div>
 
-      
         <form className="flex flex-col md:gap-16 gap-4">
-       
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
-              type="text"
-              placeholder="First Name"
-              className="border-b border-gray-400 focus:border-black outline-none py-2"
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              className="border-b border-gray-400 focus:border-black outline-none py-2"
-            />
+            <div className=" flex flex-col gap-2">
+              <label className="text-[20px] font-medium">First Name </label>
+              <input
+                type="text"
+                className="border-b border-gray-400 focus:border-black outline-none "
+              />
+            </div>
+
+            <div className=" flex flex-col gap-2">
+              <label className="text-[20px] font-medium">Last Name </label>
+              <input
+                type="text"
+                className="border-b border-gray-400 focus:border-black outline-none "
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
-              type="text"
-              placeholder="Phone Number"
-              className="border-b border-gray-400 focus:border-black outline-none py-2"
-            />
+            <div className=" flex flex-col gap-2">
+              <label className="text-[20px] font-medium">Phone Number </label>
+              <input
+                type="Number"
+                className="border-b border-gray-400 focus:border-black outline-none "
+              />
+            </div>
 
-            <input
-              type="email"
-              placeholder="Email"
-              className="border-b border-gray-400 focus:border-black outline-none py-2"
-            />
+            <div className=" flex flex-col gap-2">
+              <label className="text-[20px] font-medium">Email</label>
+              <input
+                type="email"
+                className="border-b border-gray-400 focus:border-black outline-none "
+              />
+            </div>
           </div>
 
-          <textarea
-            placeholder="Message"
-           
-            className="border-b border-gray-400 focus:border-black outline-none py-2"
-          />
+          <div className=" flex flex-col gap-2">
+            <label className="text-[20px] font-medium">Message</label>
+            <textarea className="border-b border-gray-400 focus:border-black outline-none py-2" />
+          </div>
 
-          {/* Submit Button */}
           <div className="flex justify-center items-center">
             <button
               type="submit"

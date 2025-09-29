@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react"; // lucide-react icons
-// import Image from "next/image";
-// import heartWithoutBackground from "@/assests/heartWithoutcolor.png";
+import Image from "next/image";
+import heartWithoutBackground from "@/assests/heartWithoutcolor.png";
 
 const faqs = [
   {
@@ -51,9 +51,9 @@ export default function FAQ() {
   };
 
   return (
-    <section className="text-white  py-16 flex flex-col gap-32">
-      <div className="grid md:grid-cols-4 grid-cols-1  md:pl-12 px-6 ">
-        <div className=" flex flex-col gap-8">
+    <section className="text-white  py-20 flex flex-col md:gap-32 gap-16 relative ">
+      <div className="grid md:grid-cols-8 grid-cols-1  md:pl-18 pl-4 md:pr-4  pr-4  justify-between w-full ">
+        <div className=" flex flex-col gap-8 col-span-2">
           <div className="flex gap-4 items-center ">
             <div className="primary-main h-[8px] w-[8px] "></div>
             <h2 className="md:text-lg text-md  uppercase ">Way of work</h2>
@@ -64,7 +64,7 @@ export default function FAQ() {
           </h1>
         </div>
 
-        <div className="mt-16 space-y-6 col-span-2">
+        <div className="md:mt-32 mt-16 space-y-6 col-span-5 ">
           {faqs.map((faq) => (
             <div
               key={faq.id}
@@ -72,7 +72,7 @@ export default function FAQ() {
               onClick={() => toggle(faq.id)}
             >
               <div className="flex justify-between items-center">
-                <div className="flex gap-4 items-center font-medium md:text-xl text-sm">
+                <div className="flex gap-4  font-medium md:text-xl text-sm w-full">
                   <p>
                     <span className="text-primary-main mr-1">
                       {openId === faq?.id && "/"}
@@ -84,38 +84,45 @@ export default function FAQ() {
                       {openId !== faq?.id && "/"}
                     </span>
                   </p>
-                  <h3 className="md:text-xl text-sm font-medium">
-                    {" "}
-                    {faq.question}
-                  </h3>
-                </div>
 
-                {openId === faq.id ? (
-                  <Minus className="md:w-6 w-3 md:h-6 h-3 text-primary-main" />
-                ) : (
-                  <Plus className="md:w-6 w-3 md:h-6 h-3 text-primary-main" />
-                )}
+                  <div className="flex flex-col gap-2 w-full">
+                    <div className="flex gap-4 justify-between ">
+                      <h3 className="md:text-xl text-sm font-medium">
+                        {" "}
+                        {faq.question}
+                      </h3>
+                      {openId === faq.id ? (
+                        <Minus className="md:w-6 w-3 md:h-6 h-3 text-primary-main" />
+                      ) : (
+                        <Plus className="md:w-6 w-3 md:h-6 h-3 text-primary-main" />
+                      )}
+                    </div>
+
+                    {openId === faq.id && (
+                      <p className="mt-3 text-gray-600 md:text-xl text-sm">
+                        {faq.answer}
+                      </p>
+                    )}
+                  </div>
+                </div>
               </div>
 
               {/* Answer */}
-              {openId === faq.id && (
-                <p className="mt-3 text-gray-600 md:text-xl text-sm">
-                  {faq.answer}
-                </p>
-              )}
             </div>
           ))}
         </div>
-        {/* <div className="w-full flex justify-end">
-          <div className="relative  md:w-[231px] w-[100px] md:h-[231px] h-[100px] -mt-[50px] -rotate-45">
-            <Image
-              src={heartWithoutBackground}
-              alt="Moving Image"
-              fill
-              className="object-contain rounded-xl shadow-lg blur-[20px] ml-[80px]"
-            />
+        <div className="md:block hidden">
+          <div className=" w-full flex justify-end absolute left-32  top-16 -z-10">
+            <div className="relative  md:w-[200px] w-[100px] md:h-[200px] h-[100px]  -rotate-45">
+              <Image
+                src={heartWithoutBackground}
+                alt="Moving Image"
+                fill
+                className="object-contain rounded-xl shadow-lg blur-[20px] "
+              />
+            </div>
           </div>
-        </div> */}
+        </div>
       </div>
 
       {/* FAQ List */}

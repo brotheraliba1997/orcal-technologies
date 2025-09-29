@@ -40,7 +40,7 @@ export default function Industriesweserved() {
         breakpoints={{
           320: { slidesPerView: 1.2, spaceBetween: 10 }, // mobile
           640: { slidesPerView: 2, spaceBetween: 15 }, // tablet
-          1024: { slidesPerView: 3.5, spaceBetween: 20 }, // desktop
+          1024: { slidesPerView: 2.5, spaceBetween: 20 }, // desktop
         }}
         modules={[Pagination, Autoplay]}
         className="mySwiper w-full"

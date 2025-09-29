@@ -55,17 +55,19 @@ function Wayofwork() {
         </div> */}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 border-gray-700 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 border-gray-700 md:px-20 px-4">
         {Wayofwork.map((wayofwork, idx) => (
           <div
             key={idx}
-            className={`py-8 md:px-12 px-4  flex md:flex-row flex-col   justify-center items-center md:gap-8 gap-4 ${
-              idx === 0 || idx === 1 ? "" : "border-t"
-            }  border-l border-gray-700 
+            className={`py-8 md:px-12 px-4  flex md:flex-row flex-col   justify-center items-center md:gap-0 gap-4 ${
+              idx === 0 || idx === 1 ? "" : "md:border-t border-0"
+            } ${
+              idx === 0 || idx === 2 ? "md:border-r border-0" : "border-0"
+            }   border-gray-700 
              
              `}
           >
-            <div className="w-[229px] h-[229px] relative ">
+            <div className="w-[190px] h-[190px] relative ">
               <Image
                 src={wayofwork.img}
                 alt={wayofwork.title}
@@ -73,7 +75,7 @@ function Wayofwork() {
                 className={`object-contain `}
               />
             </div>
-            <div className="flex flex-col gap-4 flex-1">
+            <div className="flex flex-col gap-12 flex-1">
               <h1 className="text-5xl font-semibold">{wayofwork.title}</h1>
               <p className="text-gray-400 text-lg leading-relaxed">
                 {wayofwork.desc}
