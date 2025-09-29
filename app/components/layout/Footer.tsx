@@ -63,6 +63,8 @@ function Footer() {
                 placeholder="Enter email address*"
                 onChange={handleChange}
                 name="email"
+                value={formData.email}
+
               />
 
               {loading ? <LoadingSpinner /> : 
