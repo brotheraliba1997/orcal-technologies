@@ -8,7 +8,7 @@ import SectionLabel from "./SectionLabel";
 export default function ScrollImages() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center md:py-20 py-10 px-10 md:gap-24 gap-8 text-white">
+      <div className="flex flex-col justify-center items-center md:py-20 py-10 px-10  md:gap-24 gap-8 text-white">
         <SectionLabel label={"OUR SERVICES"} />
 
         <h1 className="text-[35px] md:text-[84px] font-bold leading-[1]">
@@ -16,34 +16,32 @@ export default function ScrollImages() {
           <span className="text-primary-main"> works</span>
         </h1>
 
-        <div className="md:h-[300vh] h-[200vh] relative">
+        <div className="md:h-[300vh] h-[150vh] relative">
           {/* Image 1 */}
-          <div className="md:h-screen h-[400px] sticky top-0 z-10 ">
-            {/* Background Image */}
+          <div className="md:h-screen h-[50vh]  sticky top-0 z-10 ">
             <Image
               src={mathew}
               alt="Image 1"
-              className="w-full h-full md:object-cover object-contain"
+              className="w-full h-full object-contain"
               priority
             />
 
             {/* Top Left Label */}
-            <div className="flex flex-col md:justify-between justify-center md:gap-0   gap-12 absolute top-0 px-10 md:pt-10 md:pb-24 h-full">
-              <div className=" w-fit">
-                <div className="border border-[#F3FF9F] rounded-full md:px-8 px-4  md:py-3 py-2 text-white md:text-sm text-xs font-medium backdrop-blur-sm flex justify-center">
+            <div className="flex flex-col md:justify-between justify-center md:gap-0 gap-8 absolute top-0 px-6 pt-6 pb-12 h-full  text-white w-full">
+              <div className="w-fit">
+                <div className="border border-[#F3FF9F] rounded-full px-3 py-2 md:px-8 md:py-3 text-white text-xs md:text-sm font-medium backdrop-blur-sm flex justify-center">
                   Logo Design
                 </div>
               </div>
 
-              <div className=" text-white space-y-2">
-                <p className="md:text-sm text-xs uppercase tracking-widest">
+              <div className="text-white space-y-2">
+                <p className="text-xs md:text-sm uppercase tracking-widest">
                   Art Direction
                 </p>
-
-                <h2 className="md:text-[30.4px] text-[18px] font-bold">
+                <h2 className="text-lg md:text-[30.4px] font-bold">
                   Mathew Company Branding
                 </h2>
-                <p className="md:text-lg text-sm opacity-80">
+                <p className="text-sm md:text-lg opacity-80">
                   2023 - by Moonbox Studio
                 </p>
               </div>
@@ -51,96 +49,57 @@ export default function ScrollImages() {
           </div>
 
           {/* Image 2 */}
-          <div className="md:h-screen  h-[400px] sticky top-0 z-20">
-
-            
+          <div className="md:h-screen h-[50vh] sticky top-0 z-20 bg-black">
             <Image
               src={creating}
               alt="Image 2"
-              className="w-full h-full md:object-cover object-contain"
+              className="w-full h-full object-contain"
             />
 
-            {/* <div className="flex flex-col justify-between absolute top-0 px-10 pt-10 pb-24 h-full">
-              <div className=" w-fit">
-                <div className="  border border-[#F3FF9F] rounded-full px-8  py-3 text-white text-sm font-medium backdrop-blur-sm flex justify-center">
+            <div className="flex flex-col md:justify-between justify-center md:gap-0 gap-8 absolute top-0 px-6 pt-6 pb-12 h-full  text-white w-full">
+              <div className="w-fit">
+                <div className="border border-[#F3FF9F] rounded-full px-3 py-2 md:px-8 md:py-3 text-white text-xs md:text-sm font-medium backdrop-blur-sm flex justify-center">
                   Packaging
                 </div>
               </div>
 
-              <div className=" text-white space-y-2">
-                <p className="text-sm uppercase tracking-widest">Marketing</p>
-
-                <h2 className="text-[30.4px] font-bold">
+              <div className="text-white space-y-2">
+                <p className="text-xs md:text-sm uppercase tracking-widest">
+                  Marketing
+                </p>
+                <h2 className="text-lg md:text-[30.4px] font-bold">
                   Hinobe Agency Branding
                 </h2>
-                <p className="text-lg opacity-80">2023 - by Swiss Studio</p>
-              </div>
-            </div> */}
-
-            <div className="flex flex-col md:justify-between justify-center md:gap-0   gap-12 absolute top-0 px-10 md:pt-10 md:pb-24 h-full">
-              <div className=" w-fit">
-                <div className="border border-[#F3FF9F] rounded-full md:px-8 px-4  md:py-3 py-2 text-white md:text-sm text-xs font-medium backdrop-blur-sm flex justify-center">
-                  Logo Design
-                </div>
-              </div>
-
-              <div className=" text-white space-y-2">
-                <p className="md:text-sm text-xs uppercase tracking-widest">
-                  Art Direction
-                </p>
-
-                <h2 className="md:text-[30.4px] text-[18px] font-bold">
-                  Mathew Company Branding
-                </h2>
-                <p className="md:text-lg text-sm opacity-80">
-                  2023 - by Moonbox Studio
+                <p className="text-sm md:text-lg opacity-80">
+                  2023 - by Swiss Studio
                 </p>
               </div>
             </div>
           </div>
 
           {/* Image 3 */}
-          <div className="md:h-screen h-[400px] sticky top-0 z-30">
+          <div className="md:h-screen h-[50vh] sticky top-0 z-30 bg-black">
             <Image
               src={runestudios}
               alt="Image 3"
-             className="w-full h-full md:object-cover object-contain"
+              className="w-full h-full object-contain"
             />
 
-            {/* <div className="flex flex-col justify-between absolute top-0 px-10 pt-10 pb-24 h-full">
-              <div className=" w-fit">
-                <div className="  border border-[#F3FF9F] rounded-full px-8  py-3 text-white text-sm font-medium backdrop-blur-sm flex justify-center">
-                  Packaging
+            <div className="flex flex-col md:justify-between justify-center md:gap-0 gap-8 absolute top-0 px-6 pt-6 pb-12 h-full  text-white w-full">
+              <div className="w-fit">
+                <div className="border border-[#F3FF9F] rounded-full px-3 py-2 md:px-8 md:py-3 text-white text-xs md:text-sm font-medium backdrop-blur-sm flex justify-center">
+                  Campaign
                 </div>
               </div>
 
-              <div className=" text-white space-y-2">
-                <p className="text-sm uppercase tracking-widest">Marketing</p>
-
-                <h2 className="text-[30.4px] font-bold">
-                  Hinobe Agency Branding
-                </h2>
-                <p className="text-lg opacity-80">2023 - by Swiss Studio</p>
-              </div>
-            </div> */}
-
-
-              <div className="flex flex-col md:justify-between justify-center md:gap-0   gap-12 absolute top-0 px-10 md:pt-10 md:pb-24 h-full">
-              <div className=" w-fit">
-                <div className="border border-[#F3FF9F] rounded-full md:px-8 px-4  md:py-3 py-2 text-white md:text-sm text-xs font-medium backdrop-blur-sm flex justify-center">
-                  Logo Design
-                </div>
-              </div>
-
-              <div className=" text-white space-y-2">
-                <p className="md:text-sm text-xs uppercase tracking-widest">
-                  Art Direction
+              <div className="text-white space-y-2">
+                <p className="text-xs md:text-sm uppercase tracking-widest">
+                  Creative Direction
                 </p>
-
-                <h2 className="md:text-[30.4px] text-[18px] font-bold">
-                  Mathew Company Branding
+                <h2 className="text-lg md:text-[30.4px] font-bold">
+                  Rune Studios Identity
                 </h2>
-                <p className="md:text-lg text-sm opacity-80">
+                <p className="text-sm md:text-lg opacity-80">
                   2023 - by Moonbox Studio
                 </p>
               </div>
