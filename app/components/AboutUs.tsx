@@ -5,16 +5,17 @@ import Image from "next/image";
 import glass from "@/assests/Creativity-glass.png";
 import creating from "@/assests/creatibg-right.png";
 import SectionLabel from "./SectionLabel";
-import AnimatedBackground from "./AnimatedBackground";
+import AnimationBackGround from "./AnimationBackGround";
+
 
 export default function AboutUs() {
   return (
 
     <> 
 
-<AnimatedBackground >
+<AnimationBackGround >
 
-   <section className="text-white border border-black pb-20 ">
+   <section className="text-white  ">
       <div className="flex justify-between items-center ">
         <div className="md:px-12 px-4 md:mt-8  mt-4 flex flex-col gap-8 ">
           <SectionLabel label={"About Us"} />
@@ -25,12 +26,12 @@ export default function AboutUs() {
           </h1>
         </div>
 
-        <div className="relative md:w-[273px] w-[100px] md:h-[273px] h-[100px] md:mt-[80px] -mt-[50px]  ">
+        <div className="relative md:w-[273px] w-[100px] md:h-[273px] h-[100px] md:-mt-[50px] -mt-[50px]  ">
           <Image
             src={creating}
             alt="Moving Image"
             fill
-            className="object-contain rounded-xl shadow-lg"
+            className="object-contain "
           />
         </div>
       </div>
@@ -45,12 +46,12 @@ export default function AboutUs() {
             src={glass}
             alt="Moving Image"
             fill
-            className="object-contain rounded-xl shadow-lg"
+            className="object-contain"
           />
         </motion.div>
 
         <div>
-          <p className="text-lg text-[#BBBBBB] leading-relaxed">
+          <p className="md:text-lg text-sm text-[#BBBBBB] leading-relaxed">
             Creating a logo design is an intricate process that should
             incorporate your brand`&apos;`s vision, and for that, you need the
             best logo designers in Dubai. At Moonbox we have a team of creative
@@ -66,7 +67,7 @@ export default function AboutUs() {
         </div>
       </div>
     </section>
- </AnimatedBackground>
+ </AnimationBackGround>
 
      </>
 
