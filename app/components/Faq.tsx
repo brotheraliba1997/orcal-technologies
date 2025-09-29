@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Minus, Plus } from "lucide-react"; // lucide-react icons
 import Image from "next/image";
 import heartWithoutBackground from "@/assests/heartWithoutcolor.png";
+import AnimationBackGround from "./AnimationBackGround";
 
 const faqs = [
   {
@@ -51,7 +52,11 @@ export default function FAQ() {
   };
 
   return (
+
+    
+    
     <section className="text-white  py-20 flex flex-col lg:gap-32 gap-16 relative ">
+      <AnimationBackGround >
       <div className="grid lg:grid-cols-8 grid-cols-1  lg:pl-18 pl-4 lg:pr-4  pr-4  justify-between w-full ">
         <div className=" flex flex-col gap-8 col-span-2">
           <div className="flex gap-4 items-center ">
@@ -126,6 +131,8 @@ export default function FAQ() {
       </div>
 
       {/* FAQ List */}
+      </AnimationBackGround>
     </section>
+
   );
 }

@@ -5,6 +5,7 @@ import logo1 from "@/assests/One.png";
 import two from "@/assests/two.png";
 import Three from "@/assests/Three.png";
 import heart from "@/assests/heart-frame.png";
+import AnimationBackGround from "./AnimationBackGround";
 // import heartWithoutBackground from "@/assests/heartWithoutcolor.png";
 
 function Wayofwork() {
@@ -31,6 +32,8 @@ function Wayofwork() {
     },
   ];
   return (
+
+     <AnimationBackGround>
     <section className=" text-white md:py-32 py-16 flex flex-col md:gap-32 gap-16 ">
       <div className="flex justify-between items-center md:pl-12 pl-4 ">
         <div className=" flex flex-col gap-8">
@@ -85,6 +88,7 @@ function Wayofwork() {
         ))}
       </div>
     </section>
+     </AnimationBackGround>
   );
 }
 
