@@ -5,7 +5,7 @@ import Image from "next/image";
 import glass from "@/assests/Creativity-glass.png";
 import creating from "@/assests/creatibg-right.png";
 import SectionLabel from "./SectionLabel";
-import AnimationBackGround from "./AnimationBackGround";
+// import AnimationBackGround from "./AnimationBackGround";
 
 
 export default function AboutUs() {
@@ -13,7 +13,7 @@ export default function AboutUs() {
 
     <> 
 
-<AnimationBackGround >
+{/* <AnimationBackGround > */}
 
    <section className="text-white  ">
       <div className="flex justify-between items-center ">
@@ -67,7 +67,7 @@ export default function AboutUs() {
         </div>
       </div>
     </section>
- </AnimationBackGround>
+ {/* </AnimationBackGround> */}
 
      </>
 
