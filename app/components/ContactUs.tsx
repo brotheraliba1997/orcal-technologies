@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import LoadingSpinner from "./spinner";
 
 interface Form {
   firstName: string;
@@ -20,6 +21,8 @@ function ContactUs() {
     message: "",
   });
 
+  const [loading, setLoading] = useState<boolean>(false);
+
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -31,10 +34,22 @@ function ContactUs() {
   const submitHandleChange = async (e: any) => {
     e.preventDefault();
     try {
+      setLoading(true);
       const dataSubmited = await axios.post("/api/contact-us", formData);
+      setLoading(false);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
       console.log(dataSubmited?.data?.message);
       toast.success(dataSubmited?.data?.message);
     } catch (err: any) {
+      setLoading(false);
+
       toast.error(err?.response?.data?.message);
     }
   };
@@ -123,9 +138,11 @@ function ContactUs() {
           <div className="flex justify-center items-center">
             <button
               type="submit"
-              className="mt-4 flex items-center justify-center gap-3 border border-gray-800 pl-12  font-medium hover:bg-gray-100 transition"
+              className="mt-4 flex cursor-pointer items-center justify-center gap-3 border border-gray-800 pl-12  font-medium hover:bg-gray-100 transition"
             >
               Submit
+
+              {loading ? <LoadingSpinner /> :  
               <span className="bg-[#F3FF9F] p-4 rounded-md">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -142,6 +159,7 @@ function ContactUs() {
                   />
                 </svg>
               </span>
+              }
             </button>
           </div>
         </form>

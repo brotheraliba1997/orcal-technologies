@@ -7,6 +7,7 @@ import bullseye from "@/assests/Bullseye-logo.png";
 import Link from "next/link";
 import axios from "axios";
 import { toast } from "react-toastify";
+import LoadingSpinner from "../spinner";
 
 interface Form {
   email: string;
@@ -16,6 +17,7 @@ function Footer() {
   const [formData, setFormData] = useState<Form>({
     email: "",
   });
+  const [loading, setLoading] = useState<boolean>()
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -28,10 +30,16 @@ function Footer() {
   const submitHandleChange = async (e: any) => {
     e.preventDefault();
     try {
+      setLoading(true)
       const dataSubmited = await axios.post("/api/news-letter", formData);
       console.log(dataSubmited?.data?.message);
+      setLoading(false)
+      setFormData({email: ""})
+
       toast.success(dataSubmited?.data?.message);
     } catch (err: any) {
+      setLoading(false)
+
       toast.error(err?.response?.data?.message);
     }
   };
@@ -56,12 +64,15 @@ function Footer() {
                 onChange={handleChange}
                 name="email"
               />
+
+              {loading ? <LoadingSpinner /> : 
               <div
-                className="bg-white p-3 flex justify-center items-center rounded-full "
+                className="bg-white p-4 flex justify-center items-center rounded-full "
                 onClick={submitHandleChange}
               >
                 <FaArrowRight />
               </div>
+              }
             </div>
           </div>
 
