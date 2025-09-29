@@ -9,6 +9,7 @@ export const connectDB = async () => {
   try {
     const db = await mongoose.connect(process.env.NEXT_DATABASE as string, {
       dbName: "orca",
+     
     });
     isConnected = db.connections[0].readyState === 1;
     console.log("✅ MongoDB connected");
