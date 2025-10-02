@@ -49,7 +49,7 @@ export default function AboutUs() {
             <motion.div
               animate={{ y: [0, -40, 0, 40, 0], x: [0, 20, 0, -20, 0] }}
               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-              className="relative w-full lg:h-[600px] md:h-[500px] h-[300px]"
+              className="relative w-full lg:h-[350px]  h-[300px]"
             >
               <Image
                 src={glass}
