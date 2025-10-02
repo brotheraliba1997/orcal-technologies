@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import LoadingSpinner from "./spinner";
+import TypewriterHTML from "./animation/letterAnimation";
 
 interface Form {
   firstName: string;
@@ -61,9 +62,14 @@ function ContactUs() {
           <h2 className="text-lg uppercase tracking-wider text-gray-700">
             Contact Us
           </h2>
-          <h1 className="text-[44px] md:text-[84px] font-bold leading-tight">
+
+          <div className="h-[100px]">
+            <TypewriterHTML
+              html={`  <h1 class="text-[44px] md:text-[84px] font-bold leading-tight">
             Reach Us
-          </h1>
+          </h1>`}
+            />
+          </div>
           <p className="text-gray-600 text-lg">
             Have a project in mind or need expert guidance? We’d love to{" "}
             <br></br> hear from you. Reach out to us for inquiries,
@@ -98,7 +104,6 @@ function ContactUs() {
               <label className="text-[20px] font-medium">Last Name </label>
               <input
                 value={formData.lastName}
-
                 onChange={handleChange}
                 name="lastName"
                 type="text"
@@ -113,7 +118,6 @@ function ContactUs() {
               <input
                 type="Number"
                 value={formData.phone}
-
                 onChange={handleChange}
                 name="phone"
                 className="border-b border-gray-400 focus:border-black outline-none "
@@ -125,7 +129,6 @@ function ContactUs() {
               <input
                 type="email"
                 value={formData.email}
-
                 onChange={handleChange}
                 name="email"
                 className="border-b border-gray-400 focus:border-black outline-none "
@@ -137,8 +140,7 @@ function ContactUs() {
             <label className="text-[20px] font-medium">Message</label>
             <textarea
               onChange={handleChange}
-                value={formData.message}
-
+              value={formData.message}
               name="message"
               className="border-b border-gray-400 focus:border-black outline-none py-2"
             />

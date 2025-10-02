@@ -4,6 +4,7 @@ import mathew from "@/assests/mathew.png";
 import creating from "@/assests/hinobe.jpg";
 import runestudios from "@/assests/runestudios.jpg";
 import SectionLabel from "./SectionLabel";
+import TypewriterHTML from "./animation/letterAnimation";
 
 export default function ScrollImages() {
   return (
@@ -11,10 +12,19 @@ export default function ScrollImages() {
       <div className="flex flex-col justify-center items-center md:py-20 py-10 lg:px-4 px-4  gap-12 text-white">
         <SectionLabel label={"OUR SERVICES"} />
 
-        <h1 className="text-[35px] md:text-6xl lg:text-[84px] font-bold leading-[1]">
+        {/* <h1 className="text-[35px] md:text-6xl lg:text-[84px] font-bold leading-[1]">
           View our
           <span className="text-primary-main"> works</span>
-        </h1>
+        </h1> */}
+
+        <div className="h-[100px]">
+          <TypewriterHTML
+            html={`<h1 class="text-[35px] md:text-6xl lg:text-[84px] font-bold leading-[1]">
+                                                                                    View our
+                                                      <span class="text-primary-main"> works</span>
+                                                                                             </h1>`}
+          />
+        </div>
 
         <div className="lg:h-[300vh] md:h-[1200px] h-[720px] relative w-full ">
           {/* Image 1 */}

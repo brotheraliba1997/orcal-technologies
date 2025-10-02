@@ -6,6 +6,8 @@ import person from "@/assests/CloudWatch-logo.png";
 import blink from "@/assests/Powersurge-logo.png";
 import book from "@/assests/Lightspeed-logo.png";
 import bussines from "@/assests/warpspeed-logo.png";
+import TypewriterHTML from "./animation/letterAnimation";
+import SectionLabel from "./SectionLabel";
 
 const services = [
   {
@@ -32,15 +34,19 @@ export default function OurClients() {
   return (
     <section className=" text-white py-20 flex flex-col md:gap-32 gap-16 md:px-12 px-4">
       <div className="md:px-12 px-4 mt-8 flex flex-col gap-8 justify-center items-center">
-        <div className="flex gap-4 items-center ">
-          <div className="primary-main h-[8px] w-[8px] "></div>
-          <h2 className="text-lg  uppercase ">Way of work</h2>
-        </div>
+             <SectionLabel label={"Way of work"} />
+       
 
-        <h1 className="text-[44px] md:text-[84px] font-bold leading-[1]">
+      
+
+        <div className="h-[100px]">
+          <TypewriterHTML
+            html={`  <h1 class="text-[44px] md:text-[84px] font-bold leading-[1]">
           Our
-          <span className="text-primary-main">Clients</span>
-        </h1>
+          <span class="text-primary-main">Clients</span>
+        </h1> `}
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-gray-700 ">
@@ -60,7 +66,7 @@ export default function OurClients() {
               />
             </div>
 
-            <div className="text-right w-full" > #{idx+1} </div>
+            <div className="text-right w-full"> #{idx + 1} </div>
           </div>
         ))}
       </div>

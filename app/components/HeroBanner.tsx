@@ -2,6 +2,9 @@
 import React from "react";
 import SectionLabel from "./SectionLabel";
 
+import TypewriterHTML from "./animation/letterAnimation";
+
+
 export default function HeroBanner() {
   return (
     <section className="relative w-full lg:h-[800px] md:h-[600px] h-[450px] overflow-hidden">
@@ -17,22 +20,40 @@ export default function HeroBanner() {
         <div className="flex flex-col gap-4    text-white  md:px-18  px-10">
           <SectionLabel label={"IN DUBAI"} />
 
-          <div className="flex justify-between lg:items-center items-start lg:flex-row flex-col lg:gap-0 md:gap-8 ">
-            <h1 className="lg:text-[140px] md:text-8xl  text-[50px]  font-bold font-Satoshi">
-              Leading
-            </h1>
+          <div className="flex justify-between lg:items-center items-start lg:flex-row flex-col lg:gap-0 md:gap-8">
+            <div className="h-[150px]">
+              <TypewriterHTML
+                html={`<h1 class="lg:text-[140px] md:text-8xl  text-[50px] text-white font-bold font-Satoshi ">Loadings</h1>`}
+              />
+            </div>
+
             <div className="flex gap-4 md:flex-col flex-col ">
               <p className="text-lg lg:text-xl text-primary-main">© 2025 </p>
-              <p className="text-lg lg:text-xl md:text-4xl "> Let your brand stands out</p>
+              <p className="text-lg lg:text-xl md:text-4xl ">
+                {" "}
+                Let your brand stands out
+              </p>
             </div>
           </div>
 
-          <div className="flex gap-4 lg:text-[128px] md:text-[50px] text-[25px] text-primary-main   ">
-            <h2 className=" font-semibold  ">
-              LOGO Design <span className="text-white">Agency </span>
+          <div className="h-[200px]">
+            <TypewriterHTML
+              html={`<div class="flex gap-4 lg:text-[128px] md:text-[50px] text-[25px] text-primary-main   ">     
+                <h2 class=" font-semibold  ">
+              LOGO Design <span class="text-white">Agency </span>
             </h2>
+          </div>`}
+            />
           </div>
         </div>
+
+        {/* <MyComponent /> */}
+
+        {/* <p className="typewriter  w-[300px]">
+        <span className="text-white">Hamza </span>
+        <span className="text-sky-400">Ali </span>
+        <span className="text-pink-400">Rizvi</span>
+      </p> */}
 
         <div></div>
 

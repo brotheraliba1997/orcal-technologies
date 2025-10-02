@@ -1,10 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Minus, Plus } from "lucide-react"; // lucide-react icons
 import Image from "next/image";
 import heartWithoutBackground from "@/assests/heartWithoutcolor.png";
 import AnimationBackGround from "./AnimationBackGround";
+import TypewriterHTML from "./animation/letterAnimation";
+import SectionLabel from "./SectionLabel";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const faqs = [
   {
@@ -51,88 +55,95 @@ export default function FAQ() {
     setOpenId(openId === id ? null : id);
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation speed (1s)
+      once: false, // scroll upar wapas aane pe dobara trigger hoga
+    });
+  }, []);
+
   return (
-
-    
-    
     <section className="text-white  py-20 flex flex-col lg:gap-32 gap-16 relative ">
-      <AnimationBackGround >
-      <div className="grid lg:grid-cols-8 grid-cols-1  lg:pl-18 pl-4 lg:pr-4  pr-4  justify-between w-full ">
-        <div className=" flex flex-col gap-8 col-span-2">
-          <div className="flex gap-4 items-center ">
-            <div className="primary-main h-[8px] w-[8px] "></div>
-            <h2 className="md:text-lg text-md  uppercase ">Way of work</h2>
-          </div>
+      <AnimationBackGround>
+        <div className="grid lg:grid-cols-8 grid-cols-1  lg:pl-18 pl-4 lg:pr-4  pr-4  justify-between w-full ">
+          <div className=" flex flex-col gap-8 col-span-2">
+            <SectionLabel label={"Way of work"} />
 
-          <h1 className="text-[44px] md:text-[84px] font-bold leading-[1]">
-            <span className="text-primary-main"> FAQ.</span>
-          </h1>
-        </div>
-
-        <div className="md:mt-32 mt-16 space-y-6 col-span-5 ">
-          {faqs.map((faq) => (
-            <div
-              key={faq.id}
-              className="border-b border-gray-300 pb-4 cursor-pointer"
-              onClick={() => toggle(faq.id)}
-            >
-              <div className="flex justify-between items-center">
-                <div className="flex gap-4  font-medium md:text-xl text-sm w-full">
-                  <p>
-                    <span className="text-primary-main mr-1">
-                      {openId === faq?.id && "/"}
-                    </span>
-
-                    {faq?.id}
-
-                    <span className="text-primary-main ml-1">
-                      {openId !== faq?.id && "/"}
-                    </span>
-                  </p>
-
-                  <div className="flex flex-col gap-2 w-full">
-                    <div className="flex gap-4 justify-between ">
-                      <h3 className="md:text-xl text-sm font-medium">
-                        {" "}
-                        {faq.question}
-                      </h3>
-                      {openId === faq.id ? (
-                        <Minus className="md:w-6 w-3 md:h-6 h-3 text-primary-main" />
-                      ) : (
-                        <Plus className="md:w-6 w-3 md:h-6 h-3 text-primary-main" />
-                      )}
-                    </div>
-
-                    {openId === faq.id && (
-                      <p className="mt-3 text-gray-600 md:text-xl text-sm">
-                        {faq.answer}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              </div>
-
-              {/* Answer */}
-            </div>
-          ))}
-        </div>
-        <div className="lg:block hidden">
-          <div className=" w-full flex justify-end absolute left-32  top-16 -z-10">
-            <div className="relative  md:w-[200px] w-[100px] md:h-[200px] h-[100px]  -rotate-45">
-              <Image
-                src={heartWithoutBackground}
-                alt="Moving Image"
-                fill
-                className="object-contain rounded-xl shadow-lg blur-[20px] "
+            <div className="h-[100px]">
+              <TypewriterHTML
+                html={`<h1 class="text-[44px] md:text-[84px] font-bold leading-[1]">
+            <span class="text-primary-main"> FAQ.</span>
+          </h1> `}
               />
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* FAQ List */}
+          <div className="md:mt-32 mt-16 space-y-6 col-span-5 ">
+            {faqs.map((faq, index) => (
+              <div
+                key={faq.id}
+                data-aos={
+                  index === 1  ? "fade-left" : "fade-right"
+                }
+                className="border-b border-gray-300 pb-4 cursor-pointer"
+                onClick={() => toggle(faq.id)}
+              >
+                <div className="flex justify-between items-center">
+                  <div className="flex gap-4  font-medium md:text-xl text-sm w-full">
+                    <p>
+                      <span className="text-primary-main mr-1">
+                        {openId === faq?.id && "/"}
+                      </span>
+
+                      {faq?.id}
+
+                      <span className="text-primary-main ml-1">
+                        {openId !== faq?.id && "/"}
+                      </span>
+                    </p>
+
+                    <div className="flex flex-col gap-2 w-full">
+                      <div className="flex gap-4 justify-between ">
+                        <h3 className="md:text-xl text-sm font-medium">
+                          {" "}
+                          {faq.question}
+                        </h3>
+                        {openId === faq.id ? (
+                          <Minus className="md:w-6 w-3 md:h-6 h-3 text-primary-main" />
+                        ) : (
+                          <Plus className="md:w-6 w-3 md:h-6 h-3 text-primary-main" />
+                        )}
+                      </div>
+
+                      {openId === faq.id && (
+                        <p className="mt-3 text-gray-600 md:text-xl text-sm">
+                          {faq.answer}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Answer */}
+              </div>
+            ))}
+          </div>
+          <div className="lg:block hidden">
+            <div className=" w-full flex justify-end absolute left-32  top-16 -z-10">
+              <div className="relative  md:w-[200px] w-[100px] md:h-[200px] h-[100px]  -rotate-45">
+                <Image
+                  src={heartWithoutBackground}
+                  alt="Moving Image"
+                  fill
+                  className="object-contain rounded-xl shadow-lg blur-[20px] "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ List */}
       </AnimationBackGround>
     </section>
-
   );
 }

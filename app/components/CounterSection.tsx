@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import counterBottom from "@/assests/counter-bottom-screen.png";
+
+import CountUp from "react-countup";
 
 function CounterSection() {
   return (
@@ -40,7 +43,10 @@ function CounterSection() {
                 </p>
               </div>
 
-              <h2 className="lg:text-[80px] md:text-6xl text-[44px]  font-bold">98+</h2>
+              <h1 className="lg:text-[80px] md:text-6xl text-[44px] font-bold">
+                <CountUp start={0} end={98} duration={3} separator="+" />
+                <span className="font-medium">+</span>
+              </h1>
             </div>
           </div>
 
@@ -54,7 +60,10 @@ function CounterSection() {
                 </p>
               </div>
 
-              <h2 className="lg:text-[80px] md:text-6xl  text-[44px] font-bold">200M</h2>
+              <h1 className="lg:text-[80px] md:text-6xl text-[44px] font-bold">
+                <CountUp start={50} end={200} duration={3} separator="+" />
+                <span className="font-medium">M</span>
+              </h1>
             </div>
           </div>
 
@@ -68,7 +77,9 @@ function CounterSection() {
                 </p>
               </div>
 
-              <h2 className="lg:text-[80px] md:text-6xl  text-[44px] font-bold">99%</h2>
+              <h2 className="lg:text-[80px] md:text-6xl  text-[44px] font-bold">
+                99%
+              </h2>
             </div>
           </div>
         </div>

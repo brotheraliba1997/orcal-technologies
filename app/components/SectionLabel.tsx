@@ -1,15 +1,24 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface Label {
   label: string;
 }
 
 function SectionLabel({ label }: Label) {
-  return (
-    <div className="flex gap-2 items-center">
-      <div className="primary-main h-[8px] w-[8px] "></div>
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation speed (1s)
+      once: false, // scroll upar wapas aane pe dobara trigger hoga
+    });
+  }, []);
 
-      <p className="md:text-lg text-sm tracking-widest uppercase ">  {label} </p>
+  return (
+    <div data-aos="fade-right" className="flex gap-2 items-center">
+      <div className="primary-main h-[8px] w-[8px] "></div>
+      <p className="md:text-lg text-sm tracking-widest uppercase "> {label} </p>
     </div>
   );
 }
