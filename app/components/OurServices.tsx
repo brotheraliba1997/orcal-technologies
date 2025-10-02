@@ -13,7 +13,7 @@ const services = [
   {
     img: logo1,
     title: "Company Logo Design",
-    desc: "To craft a distinctive and recognizable logo, we narrow down your brand’s colours, logo marks, fonts, and many more.",
+    desc: "To craft a distinctive and recognizable logo, we narrow down your brand’s colourss, logo marks, fonts, and many more.",
   },
   {
     img: Glass,
