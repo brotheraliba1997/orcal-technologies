@@ -32,12 +32,9 @@ const services = [
 
 export default function OurClients() {
   return (
-    <section className=" text-white lg:py-20 py-10 flex flex-col md:gap-32 gap-16 md:px-12 px-4">
+    <section className=" text-white lg:py-20 py-10 flex flex-col md:gap-32 gap-8 md:px-12 px-4">
       <div className="md:px-12 px-4 mt-8 flex flex-col gap-8 justify-center items-center">
              <SectionLabel label={"Way of work"} />
-       
-
-      
 
         <div className="h-[100px]">
           <TypewriterHTML

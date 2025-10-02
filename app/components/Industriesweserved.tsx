@@ -109,7 +109,7 @@ export default function Industriesweserved() {
         </Swiper>
       </div>
 
-      <div className="lg:hidden block px-8 py-10"  ref={outsideClickRef}>
+      <div className="lg:hidden block px-2  py-10"  ref={outsideClickRef}>
         <div className="grid grid-cols-1 gap-8">
           {imagesList
             ?.slice(0, showImageList ? imagesList?.length : 3)
