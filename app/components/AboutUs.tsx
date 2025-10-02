@@ -5,7 +5,7 @@ import Image from "next/image";
 import glass from "@/assests/Creativity-glass.png";
 import creating from "@/assests/creatibg-right.png";
 import SectionLabel from "./SectionLabel";
-import AnimationBackGround from "./AnimationBackGround";
+import AnimationBackGround from "./animation/AnimationBackGround";
 
 import TypewriterHTML from "./animation/letterAnimation";
 

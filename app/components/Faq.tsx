@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Minus, Plus } from "lucide-react"; // lucide-react icons
 import Image from "next/image";
 import heartWithoutBackground from "@/assests/heartWithoutcolor.png";
-import AnimationBackGround from "./AnimationBackGround";
+import AnimationBackGround from "./animation/AnimationBackGround";
 import TypewriterHTML from "./animation/letterAnimation";
 import SectionLabel from "./SectionLabel";
 import AOS from "aos";

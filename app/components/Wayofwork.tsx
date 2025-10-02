@@ -5,7 +5,7 @@ import logo1 from "@/assests/One.png";
 import two from "@/assests/two.png";
 import Three from "@/assests/Three.png";
 import heart from "@/assests/heart-frame.png";
-import AnimationBackGround from "./AnimationBackGround";
+import AnimationBackGround from "./animation/AnimationBackGround";
 import TypewriterHTML from "./animation/letterAnimation";
 import SectionLabel from "./SectionLabel";
 // import heartWithoutBackground from "@/assests/heartWithoutcolor.png";
