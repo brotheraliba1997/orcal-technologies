@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import LoadingSpinner from "./spinner";
+import LoadingSpinner from "./common/spinner";
 import TypewriterHTML from "./animation/letterAnimation";
 
 interface Form {

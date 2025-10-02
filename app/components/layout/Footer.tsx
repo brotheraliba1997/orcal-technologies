@@ -7,7 +7,7 @@ import bullseye from "@/assests/Bullseye-logo.png";
 import Link from "next/link";
 import axios from "axios";
 import { toast } from "react-toastify";
-import LoadingSpinner from "../spinner";
+import LoadingSpinner from "../common/spinner";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

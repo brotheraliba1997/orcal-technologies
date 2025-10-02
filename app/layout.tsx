@@ -5,7 +5,7 @@ import Header from "@/app/components/layout/header";
 import Footer from "./components/layout/Footer";
 
 import "react-toastify/dist/ReactToastify.css";
-import { ToastProvider } from "./components/ToastProvider";
+import { ToastProvider } from "./components/common/ToastProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
