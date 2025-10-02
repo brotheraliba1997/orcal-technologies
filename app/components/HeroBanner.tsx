@@ -7,7 +7,7 @@ import TypewriterHTML from "./animation/letterAnimation";
 
 export default function HeroBanner() {
   return (
-    <section className="relative w-full lg:h-[800px] md:h-[600px] h-[450px] overflow-hidden">
+    <section className="relative w-full lg:h-[800px] md:h-[600px] h-[500px] overflow-hidden">
       <video
         className="absolute  w-full h-full object-cover"
         src="/herobanner.mp4"
@@ -17,30 +17,35 @@ export default function HeroBanner() {
       />
       <div className="absolute inset-0 bg-black/50 " />
       <div className="relative z-10  h-full flex flex-col py-28 ">
-        <div className="flex flex-col gap-4    text-white  md:px-18  px-10">
+        <div className="flex flex-col gap-4    text-white  md:px-18  px-6">
           <SectionLabel label={"IN DUBAI"} />
 
           <div className="flex justify-between lg:items-center items-start lg:flex-row flex-col lg:gap-0 md:gap-8">
-            <div className="h-[150px]">
+            <div className="lg:h-[150px] h-[80px]">
               <TypewriterHTML
-                html={`<h1 class="lg:text-[140px] md:text-8xl  text-[50px] text-white font-bold font-Satoshi ">Loadings</h1>`}
+                html={`<h1 class="lg:text-[140px] md:text-9xl  text-[67.09px] text-white font-bold font-Satoshi ">Loadings</h1>`}
               />
             </div>
+            <div className="lg:block hidden">
 
-            <div className="flex gap-4 md:flex-col flex-col ">
+               <div className="flex gap-4 md:flex-col flex-col ">
               <p className="text-lg lg:text-xl text-primary-main">© 2025 </p>
               <p className="text-lg lg:text-xl md:text-4xl ">
                 {" "}
                 Let your brand stands out
               </p>
             </div>
+
+            </div>
+
+           
           </div>
 
-          <div className="h-[200px]">
+          <div className="h-[140px]">
             <TypewriterHTML
-              html={`<div class="flex gap-4 lg:text-[128px] md:text-[50px] text-[25px] text-primary-main   ">     
+              html={`<div class="flex gap-4 lg:text-[128px] md:text-[50px] text-[55px] text-primary-main  leading-[1] ">     
                 <h2 class=" font-semibold  ">
-              LOGO Design <span class="text-white">Agency </span>
+              LOGO Design <span class="text-white text-right w-full lg:none block ">Agency </span>
             </h2>
           </div>`}
             />

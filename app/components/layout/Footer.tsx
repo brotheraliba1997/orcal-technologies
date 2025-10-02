@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import SocialFAQs from "../SocialFAQs";
 import Image from "next/image";
@@ -8,16 +8,25 @@ import Link from "next/link";
 import axios from "axios";
 import { toast } from "react-toastify";
 import LoadingSpinner from "../spinner";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface Form {
   email: string;
 }
 
 function Footer() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const [formData, setFormData] = useState<Form>({
     email: "",
   });
-  const [loading, setLoading] = useState<boolean>()
+  const [loading, setLoading] = useState<boolean>();
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -30,15 +39,15 @@ function Footer() {
   const submitHandleChange = async (e: any) => {
     e.preventDefault();
     try {
-      setLoading(true)
+      setLoading(true);
       const dataSubmited = await axios.post("/api/news-letter", formData);
       console.log(dataSubmited?.data?.message);
-      setLoading(false)
-      setFormData({email: ""})
+      setLoading(false);
+      setFormData({ email: "" });
 
       toast.success(dataSubmited?.data?.message);
     } catch (err: any) {
-      setLoading(false)
+      setLoading(false);
 
       toast.error(err?.response?.data?.message);
     }
@@ -64,17 +73,18 @@ function Footer() {
                 onChange={handleChange}
                 name="email"
                 value={formData.email}
-
               />
 
-              {loading ? <LoadingSpinner /> : 
-              <div
-                className="bg-white p-4 flex justify-center items-center rounded-full "
-                onClick={submitHandleChange}
-              >
-                <FaArrowRight />
-              </div>
-              }
+              {loading ? (
+                <LoadingSpinner />
+              ) : (
+                <div
+                  className="bg-white p-4 flex justify-center items-center rounded-full "
+                  onClick={submitHandleChange}
+                >
+                  <FaArrowRight />
+                </div>
+              )}
             </div>
           </div>
 
@@ -133,7 +143,10 @@ function Footer() {
             <SocialFAQs />
           </div>
 
-          <div className="relative w-full md:h-[176px] h-[100px] col-span-2">
+          <div
+            data-aos="fade-up"
+            className="relative w-full md:h-[176px] h-[100px] col-span-2"
+          >
             <Image
               src={bullseye}
               layout="fill"

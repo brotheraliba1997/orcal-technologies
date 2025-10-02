@@ -43,7 +43,7 @@ const services = [
 
 export default function OurServices() {
   return (
-    <section className=" text-white py-20 flex flex-col md:gap-32 gap-16">
+    <section className=" text-white lg:py-20 py-10 flex flex-col md:gap-32 gap-2">
       <div className="md:px-12 px-4 mt-8 flex flex-col gap-8">
         <SectionLabel label={"OUR SERVICES"} />
 

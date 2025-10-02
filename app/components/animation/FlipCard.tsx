@@ -6,7 +6,7 @@ export default function FlipCard({ image }: any) {
   return (
     <div className="group [perspective:1000px] lg:w-[534px] w-full lg:h-[329px] h-[210px]">
       <div className="relative w-full h-full transition-transform duration-900 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        {/* Front Side */}
+      
         <div className="absolute inset-0  rounded-xl text-white flex items-center justify-center [backface-visibility:hidden]">
           <Image
             src={firstImage}
