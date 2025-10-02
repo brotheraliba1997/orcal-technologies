@@ -59,25 +59,28 @@ export default function AboutUs() {
               />
             </motion.div>
 
-            
 
-            <div className="h-[200px] w-full">
-              <TypewriterHTML
-                html={`<p class="lg:text-2xl md:text-2xl text-sm text-[#BBBBBB] leading-relaxed">
+           <p className="lg:text-2xl md:text-2xl text-sm text-[#BBBBBB] leading-relaxed ">
                 Creating a logo design is an intricate process that should
-                incorporate your brand's vision, and for that, you need
+                incorporate your brand`&apos;` s vision, and for that, you need
                 the best logo designers in Dubai. At Moonbox we have a team of
                 creative design experts who are exceptional in logo designing in
                 Dubai and create logos that capture the distinctiveness and
                 essence of your brand. We develop logos by integrating your
-                brand 's ethos with designers who will closely
+                brand `&apos;` s ethos with designers who will closely
                 collaborate with you to bring in a design that will highlight
-                your brand's character and resonate with the audience.
-                Transform your brand presence with Moonbox, Dubai' s most
+                your brand `&apos;` s character and resonate with the audience.
+                Transform your brand presence with Moonbox, Dubai `&apos;` s most
                 professional and influential logo design company.
-              </p>`}
+              </p>
+
+            
+
+            {/* <div className="h-[200px] w-full">
+              <TypewriterHTML
+                html={`>`}
               />
-            </div>
+            </div> */}
           </div>
         </section>
       </AnimationBackGround>
