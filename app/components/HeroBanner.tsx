@@ -45,7 +45,7 @@ export default function HeroBanner() {
             <TypewriterHTML
               html={`<div class="flex gap-4 lg:text-[128px] md:text-[50px] text-[55px] text-primary-main  leading-[1] ">     
                 <h2 class=" font-semibold  ">
-              LOGO Design <span class="text-white text-right w-full lg:none block ">Agency </span>
+              LOGO Design <span class="text-white text-right w-full lg:inline block   ">Agency </span>
             </h2>
           </div>`}
             />
