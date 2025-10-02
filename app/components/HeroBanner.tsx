@@ -52,13 +52,7 @@ export default function HeroBanner() {
           </div>
         </div>
 
-        {/* <MyComponent /> */}
-
-        {/* <p className="typewriter  w-[300px]">
-        <span className="text-white">Hamza </span>
-        <span className="text-sky-400">Ali </span>
-        <span className="text-pink-400">Rizvi</span>
-      </p> */}
+       
 
         <div></div>
 

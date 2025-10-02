@@ -67,9 +67,9 @@ export default function OurServices() {
           >
             <ServiceCard service={service} idx={idx} services={services} />
 
-            <div className="h-[100px] md:px-12 px-4 md:py-8 py-4 ">
+            <div className="lg:h-[100px] h-[80px] md:px-12 px-4 md:py-8 py-4 ">
               <TypewriterHTML
-                html={`<h1 class="lg:text-5xl text-2xl font-semibold">
+                html={`<h1 class="lg:text-5xl text-4xl font-semibold">
               ${service.title}
             </h1>`}
               />

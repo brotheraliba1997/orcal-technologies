@@ -20,7 +20,7 @@ export default function ServiceCard({ service, idx, services }: any) {
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        className={`md:w-full w-[180px] h-[180px] ${!hover ? "md:h-[230px]" : "md:h-[320px]" }  relative rounded-lg overflow-hidden`}
+        className={`md:w-full w-full h-[180px] ${!hover ? "md:h-[230px]" : "md:h-[320px]" }  relative rounded-lg overflow-hidden`}
       >
         {/* Image */}
         {!hover && (
