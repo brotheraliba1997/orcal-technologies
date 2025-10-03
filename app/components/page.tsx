@@ -9,7 +9,7 @@ import TypewriterHTML from "./animation/letterAnimation";
 export default function ScrollImages() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center md:py-20 py-10 lg:px-4 px-4  gap-12 text-white">
+      <div className="flex flex-col justify-center items-center md:py-20 py-0 lg:px-4 px-4  lg:gap-12 gap-6 text-white">
         <SectionLabel label={"OUR SERVICES"} />
 
         {/* <h1 className="text-[35px] md:text-6xl lg:text-[84px] font-bold leading-[1]">
@@ -17,13 +17,9 @@ export default function ScrollImages() {
           <span className="text-primary-main"> works</span>
         </h1> */}
 
-        <div className="h-[100px]">
+        <div className=" lg:h-[100px] h-[60px]">
           <TypewriterHTML
-            html={`<h1 class="text-[35px] md:text-6xl lg:text-[84px] font-bold leading-[1]">
-                                                                                    View our
-                                                      <span class="text-primary-main"> works</span>
-                                                                                             </h1>`}
-          />
+            html={`<h1 class="text-[35px] md:text-6xl lg:text-[84px] font-bold leading-[1]">View our<span class="text-primary-main"> works</span></h1>`}/>
         </div>
 
         <div className="lg:h-[300vh] md:h-[1200px] h-[720px] relative w-full ">

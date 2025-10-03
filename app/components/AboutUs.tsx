@@ -18,12 +18,9 @@ export default function AboutUs() {
             <div className="md:px-12 px-4 lg:mt-8  mt-4 flex flex-col gap-8 ">
               <SectionLabel label={"About Us"} />
 
-              {/* <h1 className="text-[30px] lg:text-[84px] md:text-5xl font-bold leading-[1]">
-                Where <span className="text-primary-main">Creativity</span>{" "}
-                <br /> Connects.
-              </h1> */}
+             
 
-              <div className="h-[200px]">
+              <div className="lg:h-[220px]  h-[120px]">
                 <TypewriterHTML
                   html={`<h1 class="text-[30px] lg:text-[84px] md:text-5xl font-bold leading-[1]">
                 Where <span class="text-primary-main">Creativity</span>
@@ -35,7 +32,7 @@ export default function AboutUs() {
               {/* <Hero /> */}
             </div>
 
-            <div className="relative lg:w-[273px] md:w-[150px] w-[100px] lg:h-[273px] md:h-[150px] h-[100px] lg:-mt-[50px] md:mt-[40px] -mt-[140px]  ">
+            <div className="relative lg:w-[273px] md:w-[150px] w-[100px] lg:h-[273px] md:h-[150px] h-[100px] lg:-mt-[50px] md:mt-[40px] -mt-[80px]  ">
               <Image
                 src={creating}
                 alt="Moving Image"
@@ -60,7 +57,7 @@ export default function AboutUs() {
             </motion.div>
 
 
-           <p className="lg:text-2xl md:text-2xl text-sm text-[#BBBBBB] leading-relaxed ">
+           <p className="lg:text-2xl md:text-2xl text-sm text-[#BBBBBB] leading-relaxed  lg:mt-0 mt-8 ">
                 Creating a logo design is an intricate process that should
                 incorporate your brand`&apos;` s vision, and for that, you need
                 the best logo designers in Dubai. At Moonbox we have a team of

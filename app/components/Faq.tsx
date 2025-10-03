@@ -63,13 +63,13 @@ export default function FAQ() {
   }, []);
 
   return (
-    <section className="text-white  lg:py-20 py-10 flex flex-col lg:gap-32 gap-8 relative ">
+    <section className="text-white     pb-10 flex flex-col lg:gap-24 gap-4 relative ">
       <AnimationBackGround>
-        <div className="grid lg:grid-cols-8 grid-cols-1  lg:pl-18 pl-4 lg:pr-4  pr-4  justify-between w-full ">
+        <div className="grid lg:grid-cols-8 grid-cols-1  lg:pl-14 pl-4 lg:pr-4  pr-4  justify-between w-full ">
           <div className=" flex flex-col gap-8 col-span-2">
             <SectionLabel label={"Way of work"} />
 
-            <div className="h-[100px]">
+            <div className="lg:h-[100px] h-[60px]">
               <TypewriterHTML
                 html={`<h1 class="text-[44px] md:text-[84px] font-bold leading-[1]">
             <span class="text-primary-main"> FAQ.</span>
@@ -78,7 +78,7 @@ export default function FAQ() {
             </div>
           </div>
 
-          <div className="md:mt-32 mt-16 space-y-6 col-span-5 ">
+          <div className="md:mt-32 mt-8 space-y-6 col-span-5 ">
             {faqs.map((faq, index) => (
               <div
                 key={faq.id}

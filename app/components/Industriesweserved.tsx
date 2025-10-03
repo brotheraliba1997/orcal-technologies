@@ -75,7 +75,7 @@ export default function Industriesweserved() {
       <div className="lg:block hidden md:px-12 px-4 mx-auto py-10 text-white  flex flex-col md:gap-32 gap-16">
         <div className=" mt-8 flex flex-col gap-8">
           <SectionLabel label={"Way of work"} />
-          <div className="h-[100px]">
+          <div className="lg:h-[140px] h-[100px]">
             <TypewriterHTML
               html={`<h1 class="text-[35px] md:text-6xl lg:text-[84px] font-bold leading-[1]">
           <span class="text-primary-main">Industries </span>
@@ -109,7 +109,19 @@ export default function Industriesweserved() {
         </Swiper>
       </div>
 
-      <div className="lg:hidden block px-2  py-10"  ref={outsideClickRef}>
+      <div className="lg:hidden block px-4  py-10" ref={outsideClickRef}>
+        <div className=" mt-8 flex flex-col gap-8 text-white">
+          <SectionLabel label={"Way of work"} />
+          <div className="h-[100px]">
+            <TypewriterHTML
+              html={`<h1 class="text-[35px] md:text-6xl lg:text-[84px] font-bold leading-[1]">
+          <span class="text-primary-main">Industries </span>
+          we served
+        </h1> `}
+            />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 gap-8">
           {imagesList
             ?.slice(0, showImageList ? imagesList?.length : 3)
@@ -126,7 +138,7 @@ export default function Industriesweserved() {
         </div>
 
         <div
-          className="text-white pt-8 text-center"
+          className="text-white pt-8 text-center text-lg underline"
           onClick={() => setShowImageList(!showImageList)}
         >
           View More

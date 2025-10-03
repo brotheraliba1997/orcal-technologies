@@ -3,7 +3,7 @@ import React from "react";
 
 export default function AnimationBackGround({ children }: any) {
   return (
-    <div className="relative w-full h-full  text-white my-20">
+    <div className="relative w-full h-full  text-white lg:my-20  my-5">
       {/* Blob 1 */}
       <div
         className="absolute top-20 lg:left-20 left-0 md:w-[300px] w-[100px] md:h-[300px] h-[100px] rounded-full"

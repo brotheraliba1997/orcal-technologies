@@ -57,13 +57,13 @@ function ContactUs() {
 
   return (
     <section className="relative bg-gradient-to-b from-[#F3FF9F] to-white md:py-16 py-8 md:px-10 px-4">
-      <div className=" grid lg:grid-cols-2 gap-16 bg-white shadow-lg   md:p-16 p-4">
+      <div className=" grid lg:grid-cols-2 gap-16 bg-white shadow-lg   md:p-16 py-8 px-4">
         <div className="flex flex-col md:gap-16 gap-4 md:border-r border-0  border-gray-300">
           <h2 className="text-lg uppercase tracking-wider text-gray-700">
             Contact Us
           </h2>
 
-          <div className="h-[100px]">
+          <div className="lg:h-[100px] h-[60px]">
             <TypewriterHTML
               html={`  <h1 class="text-[44px] md:text-[84px] font-bold leading-tight">
             Reach Us

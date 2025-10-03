@@ -43,11 +43,11 @@ const services = [
 
 export default function OurServices() {
   return (
-    <section className=" text-white lg:py-20 py-10 flex flex-col md:gap-32 gap-2">
+    <section className=" text-white lg:py-10 py-5 flex flex-col md:gap-32 gap-2">
       <div className="md:px-12 px-4 mt-8 flex flex-col gap-8">
         <SectionLabel label={"OUR SERVICES"} />
 
-        <div className="h-[200px]">
+        <div className="lg:h-[100px] h-[160px]">
           <TypewriterHTML
             html={` <h1 class="text-[35px] md:text-6xl lg:text-[84px] font-bold leading-[1]">
           One-stop shop for your
@@ -57,17 +57,17 @@ export default function OurServices() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-gray-700 md:px-0 px-4  ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-gray-700 md:px-0   ">
         {services.map((service, idx) => (
           <div
             key={idx}
-            className={`  flex flex-col justify-center items-center lg:gap-8 gap-4 hover:border-[#F3FF9F] border-gray-700  ${
-              idx !== services.length - 1 ? "border" : "border-t"
+            className={`  flex flex-col justify-center items-center lg:gap-8 gap-4 hover:border-[#F3FF9F] border-gray-700 lg:py-0 py-4  ${
+              idx !== services.length - 1 ? "border" : " lg:border-t"
             } `}
           >
             <ServiceCard service={service} idx={idx} services={services} />
 
-            <div className="lg:h-[100px] h-[80px] md:px-12 px-4 md:py-8 py-4 ">
+            <div className="lg:h-[100px] h-[80px] md:px-12 px-10 md:py-8 py-4 ">
               <TypewriterHTML
                 html={`<h1 class="lg:text-5xl text-4xl font-semibold">
               ${service.title}
@@ -75,7 +75,7 @@ export default function OurServices() {
               />
             </div>
 
-            <p className="text-gray-400 lg:text-lg text-md leading-relaxed md:px-12 px-4 md:py-8 py-4 ">
+            <p className="text-gray-400 lg:text-lg text-md leading-relaxed md:px-12 px-10 md:py-8 py-4 ">
               {service.desc}
             </p>
           </div>

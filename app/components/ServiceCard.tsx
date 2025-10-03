@@ -11,7 +11,7 @@ export default function ServiceCard({ service, idx, services }: any) {
         <div
           className={` ${
             !hover ? "block" : "hidden"
-          } text-left w-full md:px-12  px-4 md:py-4 py-4 `}
+          } text-left w-full md:px-12  px-10 md:py-4 py-4 `}
         >
           #{idx + 1}
         </div>

@@ -55,7 +55,7 @@ function Footer() {
 
   return (
     <>
-      <div className="pt-[150px] md:px-10 px-6   flex flex-col md:gap-32 gap-8">
+      <div className="lg:pt-[60px] pt-[40px] md:px-6 px-6   flex flex-col md:gap-12 gap-8">
         <div className="grid lg:grid-cols-8 grid-cols-1 md:gap-12 gap-4">
           <div className="flex flex-col gap-8 md:col-span-3 ">
             <h2 className="text-4xl text-white">Stay connected</h2>
